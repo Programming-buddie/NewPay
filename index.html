@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/brands.css">
+    <title>NewPay</title>
 </head>
 <body>
     <section class="main">
         <nav class="top-nav">
-                <h2>Newpay</h2>
+                <h2>NewPay</h2>
                 <div class="other">
-                    <button class="support">support</button>
-                    <button class="rewards">Rewards</button>
+                    <button class="support"><i class="far fa-question-circle"></i></button>
+                    <button class="rewards"><i class="fas fa-gift"></i>Rewards</button>
                 </div>
         </nav>
         <section class="money">
@@ -28,7 +30,7 @@
         </section>
         <section class="send-and-history">
             <div class="send-receive">
-                <button type="button" class="send">Send</button>
+                <button type="button" class="send"><i class=></i>Send</button>
                 <button type="button" class="receive">Receive</button>
             </div>
             <div class="favourite">
@@ -39,28 +41,28 @@
                 </div>
                 <div class="favourite-contact">
                     <div class="contact-a favor">
-                        <img src="./IMG_3516.JPG" alt="contact-a-profile">
-                        <div class="activity"><i class="fas fa-share"></i></div>
+                        <img src="img/user/IMG_3516.JPG" alt="contact-a-profile">
+                        <div class="activity"><i class="fab fa-bitcoin"></i></div>
                         
                     </div>
                     <div class="contact-b favor">
-                        <img src="./IMG_3517.JPG" alt="contact-b-profile">
+                        <img src="img/user/IMG_3517.JPG" alt="contact-b-profile">
                         <div class="activity"><i class="fas fas fa-dollar-sign"></i></div>
                     </div>
                     <div class="contact-c favor">
-                        <img src="./IMG_3518.JPG" alt="contact-c-profile">
+                        <img src="img/user/IMG_3518.JPG" alt="contact-c-profile">
                         <div class="activity"><i class="fas fas fa-dollar-sign"></i></div>
                     </div>
                     <div class="contact-d favor">
-                        <img src="./IMG_3519.JPG" alt="contact-d-profile">
+                        <img src="img/user/IMG_3519.JPG" alt="contact-d-profile">
                         <div class="activity"><i class="fab fa-paypal"></i></div>
                     </div>
                     <div class="contact-e favor">
-                        <img src="./IMG_3520.JPG" alt="contact-a-profile">
+                        <img src="img/user/IMG_3520.JPG" alt="contact-a-profile">
                         <div class="activity"><i class="fab fa-apple-pay"></i></div>
                     </div>
                     <div class="contact-f favor">
-                        <img src="./IMG_3516.JPG" alt="contact-a-profile">
+                        <img src="img/user/IMG_3516.JPG" alt="contact-a-profile">
                         <div class="activity"><i class="fab fa-ethereum"></i></div>
                     </div>
                 </div>
@@ -68,12 +70,12 @@
             <div class="transcation-history">
                 <div class="transcation-history-nav div-nav">
                     <p>History transaction</p>
-                    <button type="button">see more</button>
+                    <button type="button">See more</button>
                 </div>
                 <div class="history">
-                    <div class="history-a">
+                    <div class="history-a history-sec">
                         <div class="profile-details">
-                            <img src="" alt="">
+                            <img src="./img/user/IMG_3516.JPG" alt="user-profile">
                             <div class="trans-details">
                                 <h3 class="name">Dribble Pro</h3>
                                 <p class="date-time">June 28 .00:01 AM</p>
@@ -83,9 +85,9 @@
                             <p>- $573</p>
                         </div>
                     </div>
-                    <div class="history-b">
+                    <div class="history-b history-sec">
                         <div class="profile-details">
-                            <img src="" alt="">
+                            <img src="./img/user/IMG_3517.JPG" alt="user-profile">
                             <div class="trans-details">
                                 <h3 class="name">Syaiful Rjial</h3>
                                 <p class="date-time">June 22 .05:20 PM</p>
@@ -95,9 +97,9 @@
                             <p>+ $1000</p>
                         </div>
                     </div>
-                    <div class="history-c">
+                    <div class="history-c history-sec">
                         <div class="profile-details">
-                            <img src="" alt="">
+                            <img src="./img/user/IMG_3519.JPG" alt="user-profile">
                             <div class="trans-details">
                                 <h3 class="name">Radical Nerd</h3>
                                 <p class="date-time">June 12 .07:20 AM</p>
@@ -107,9 +109,42 @@
                             <p>-$273</p>
                         </div>
                     </div>
+                    <div class="history-d history-sec">
+                        <div class="profile-details">
+                            <img src="./img/user/IMG_3517.JPG" alt="user-profile">
+                            <div class="trans-details">
+                                <h3 class="name">Dribble Pro</h3>
+                                <p class="date-time">June 28 .00:01 AM</p>
+                            </div>
+                        </div>
+                        <div class="transcation-amount">
+                            <p>- $573</p>
+                        </div>
+                    </div>
+                    <div class="history-e history-sec">
+                        <div class="profile-details">
+                            <img src="./img/user/IMG_3520.JPG" alt="user-profile">
+                            <div class="trans-details">
+                                <h3 class="name">Dribble Pro</h3>
+                                <p class="date-time">June 28 .00:01 AM</p>
+                            </div>
+                        </div>
+                        <div class="transcation-amount">
+                            <p>- $573</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <div class="down-nav">
+            <i class="fas fa-home"></i>
+            <i class="far fa-credit-card"></i>
+            <i class="far fa-user-circle"></i>
+        </div>  
+    
+    </section>
+    <section class="soon">
+    <p>COMING SOON <i class="far fa-clock"></i></p><br><p>Only Send and Receive are available</p>
     </section>
 </body>
 </html>

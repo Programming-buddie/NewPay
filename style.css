@@ -1,12 +1,24 @@
+:root{
+    /* --primary-color: rgb(71, 65, 65);
+    --secondary-color: rgb(255, 253, 251);
+    --tertiary-color: rgb(153, 148, 148); */
+    /* --secondary-color: #1F242E; */
+    --secondary-color: #3B82F6;
+    /* --primary-color: #60A5FA; */
+    /* --primary-color: #93C5FD; */
+    --octonary-color: #F3F4F6;
+}
+
 body{
-    background-color: rgb(153, 148, 148);
+    background-color: var(--tertiary-color);
     margin: 0;
 }
 .main{
-    background-color: rgb(255, 253, 251);
+    background-color: var(--secondary-color);
     /* max-width: 400px; */
-    margin: 3rem auto;
+    /* margin: 3rem auto; */
     padding: 1rem;
+    margin-top: -1rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 nav{
@@ -17,6 +29,18 @@ nav{
 .other{
     display: flex;
     align-items: center;
+    gap: 1rem;
+}
+.other button{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    gap: 5px ;
+    height: 2rem;
+    font-size: 1rem;
+    box-shadow: 3px 6px;
+    
 }
 .money{
     text-align: center;
@@ -25,35 +49,42 @@ nav{
     text-align: center;
     display: flex;
     justify-content: space-between;
-
+    
 }
 .activity{
-    background-color: blueviolet;
+    background-color: var(--quinary-color);
     border-radius: 100%;
     position: relative;
-    top: -2rem;
-    left: 1.5rem;
+    top: -1.8rem;
+    left: 1.4rem;
     width: 2rem;
     height: 2rem;
     align-items: center;
     justify-content: center;
     display: flex;
-    padding: 0.3rem;
+    /* padding: 0.3rem; */
     font-size: 1.5rem;
+    
     /* color: red; */
 }
 .send-receive button{
     height: 3rem;
     font-size: 1rem;
+    font-weight: 700;
     padding: 0 3.5rem 0 3.5rem ;
     text-align: center;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 6px;
 }
+
 .favourite{
     margin-top: 1rem;
-    background-color: rgb(71, 65, 65);
+    background-color: var(--primary-color);
     color: white;
     padding: 0.5rem;
     border-radius: 15px;
+    outline: 1px solid black;
 }
 .send-again, .div-nav{
     display: flex;
@@ -61,6 +92,12 @@ nav{
     align-items: center;
     font-size: 1.1rem;
     font-weight: 700;
+}
+.div-nav button{
+    padding: 0.5rem;
+    border-radius: 52px;
+    border: none;
+    font-size: 14px;
 }
 .favourite-contact{
     display: flex;
@@ -70,8 +107,8 @@ nav{
     gap: 1rem;
 }
 
-.favourite-contact img{
-    width: 5rem;
+.favourite-contact img, img{
+    width: 4rem;
     border-radius: 50%;
 }
 .favor{
@@ -80,8 +117,74 @@ nav{
     align-items: center;
 }
 .transcation-history{
-    background-color: blue;
+    background-color: var(--primary-color);
     margin-top: 1rem;
     border-radius: 15px;
     padding: 1rem;
+    outline: 1px solid black;
+}
+.history{
+    /* background-color: brown; */
+    /* overflow-y:scroll; */
+    white-space: nowrap;
+    scrollbar-width:thin; 
+    /* height: 15rem;  */
+}
+.history img{
+    width: 3rem;
+    height: 3rem;
+}
+.history-sec{
+    display: flex;
+    justify-content: space-between;
+}
+.profile-details{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+.trans-details{
+    display: flex;
+    flex-direction: column;
+}
+.trans-details h3{
+    margin-bottom: -0.7rem;
+    margin-top: 10px;
+}
+.trans-details p{
+    font-size: 11px;
+}
+.transcation-amount{
+    font-size: 1.2rem;
+}
+.down-nav{
+    display: none;
+    /* background-color: black; */
+    border: 1px solid black;
+    color: white;
+    width: 15rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 5rem;
+    font-size: 2rem;
+    margin: 2rem auto;
+    top: 42rem;
+    /*
+    left: 14rem; */
+    position:fixed;
+}
+.soon{
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+    background-color:#F3F4F6;
+    position: fixed;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    top: 20rem;
+    left: 6rem;
+    outline: 1px solid black;
 }
