@@ -1,21 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.css" />
     <script src="send.js" defer></script>
     <title>Document</title>
-</head>
-<body>
-    <nav class="top-nav">
-                <button class="back"> <i class="fas fa-arrow-left"></i></button>
-                <h4 class="support"></h4>
-                <button class="rewards"><i class="fas fa-gift"></i>Rewards</button>
-    </nav>
+  </head>
+  <body>
     <section>
-        <input type="number" name="amout-to-send" id="amount-to-send" placeholder="10.00 --- 50,000">
+      <nav class="top-nav">
+        <button class="back"><i class="fas fa-arrow-left"></i></button>
+        <h4>Send money</h4>
+        <button class="support"><i class="far fa-question-circle"></i></button>
+      </nav>
+
+      <section class="amount-input">
+        <input
+          type="number"
+          name="amout-to-send"
+          id="amount-to-send"
+          placeholder="10.00 --- 50,000"
+        />
+      </section>
     </section>
-</body>
+  </body>
 </html>
