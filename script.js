@@ -1,5 +1,5 @@
 const amount = document.querySelectorAll(".transcation-amount");
-const inactive_button = document.querySelectorAll("button");
+const inactive_button = document.querySelectorAll(".div-nav button, .other button");
 
 const send = document.querySelector(".send")
 const receive = document.querySelector(".receive")
@@ -28,3 +28,9 @@ inactive_button.forEach((button) => {
     }, 2000);
   }
 });
+
+send.addEventListener("click", sendPage)
+function sendPage() {
+    window.location.href = "send.html"
+    
+}
