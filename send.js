@@ -1,8 +1,17 @@
 const back = document.querySelector(".back");
-const inactive_button = document.querySelectorAll(".div-nav button, .other button");
+const input = document.querySelector("input")
 
 back.addEventListener("click", prevPage);
 function prevPage() {
   console.log(window.history.back());
 }
 
+input.addEventListener("focus", () => {
+  console.log(input.value,input.click())
+})
+
+if (input.value === 10){
+  console.log("Agree")
+}else{
+  console.log("nope", localStorage.getItem("balance"))
+}

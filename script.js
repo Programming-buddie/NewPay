@@ -1,5 +1,6 @@
 const amount = document.querySelectorAll(".transcation-amount");
 const inactive_button = document.querySelectorAll(".div-nav button, .other button");
+const balance = document.querySelector(".balance")
 
 const send = document.querySelector(".send")
 const receive = document.querySelector(".receive")
@@ -28,6 +29,9 @@ inactive_button.forEach((button) => {
     }, 2000);
   }
 });
+
+console.log(balance.firstElementChild.textContent.split("$")[1])
+localStorage.setItem("balance",balance.firstElementChild.textContent.split("$")[1])
 
 send.addEventListener("click", sendPage)
 function sendPage() {
