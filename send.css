@@ -1,9 +1,35 @@
+:root{
+   --secondary-color: #3B82F6;
+   --octonary-color: #F3F4F6; 
+}
+.send-main{
+    margin: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--secondary-color);
+}
 .send-to-details{
     display: flex;
+    /* outline: 1px solid black; */
 }
 .keyboard{
     display: grid;
     grid-template-columns:repeat(3 ,auto);
     grid-template-rows: repeat(4, 5rem);
-    gap: 1rem;
+    /* padding: 1rem auto; */
+    /* gap: 1rem; */
 }
+.keyboard button{
+    border-radius: 10px;
+    width: min(100px, 200px);
+    height: 50px;
+    
+}
+input{
+    /* height: 10rem; */
+    padding: 10px;
+    font-size: 4rem;
+    width: min(320px, 400px);
+}
+/* section{
+    outline: 1px solid black;
+} */
