@@ -24,10 +24,17 @@ keypadButton.forEach((digits) => {
       // input.addEventListener("input", ()=>{
       //   console.log(input.value)
       // })
+     
+      // console.log(input.value, input.innerText);
 
-      console.log(input.value, input.innerText);
-      input.append((input.value = input.value.concat(element.textContent)));
-      input.app;
+      //input.append(
+       // (input.value = input.value.concat(element.textContent))
+      //);
+      // input.app;
+      if (digits.children[9].addEventListener("click", ()=>{
+      // input.value = input.value.slice(0, -1)
+      console.log(input.value)
+      }));
     });
   }
 });

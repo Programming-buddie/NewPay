@@ -30,6 +30,11 @@ input{
     font-size: 4rem;
     width: min(320px, 400px);
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
 /* section{
     outline: 1px solid black;
 } */
