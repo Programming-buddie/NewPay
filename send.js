@@ -32,7 +32,7 @@ keypadButton.forEach((digits) => {
       //);
       // input.app;
       if (digits.children[9].addEventListener("click", ()=>{
-      // input.value = input.value.slice(0, -1)
+          input.value = input.value.slice(0, -1)
       console.log(input.value)
       }));
     });
