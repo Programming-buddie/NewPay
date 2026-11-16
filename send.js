@@ -27,18 +27,19 @@ keypadButton.forEach((digits) => {
      
       // console.log(input.value, input.innerText);
 
-      //input.append(
-       // (input.value = input.value.concat(element.textContent))
-      //);
+      input.append(
+       (input.value = input.value.concat(element.textContent))
+      );
       // input.app;
-      if (digits.children[9].addEventListener("click", ()=>{
-          input.value = input.value.slice(0, -1)
-      console.log(input.value)
-      }));
+      digits.children[9].addEventListener("click", ()=>{
+          const apple = input.value.slice(0, -1)
+          input.value = 22
+        console.log(digits.children[9])
+      console.log(input.value, apple)
+      });
     });
   }
+  
 });
 
-if (input.click()) {
-  console.log("active", input.value);
-}
+
