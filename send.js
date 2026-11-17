@@ -8,8 +8,6 @@ function prevPage() {
   console.log(window.history.back());
 }
 
-console.log(keypadButton.children)
-
 // keypadButton.forEach((digits) => {
 //   digits.addEventListener("click", () => {
 //     if (
@@ -54,14 +52,16 @@ const numButton = keypadButton.children
 for (let index = 0; index < numButton.length; index++) {
   const element = numButton[index];
   element.addEventListener("click", ()=>{
+    
     if (element.textContent === "x") {
         const app = input.value.slice(0, -1);
         input.value = app;
-      } else {
+      }
+      else if (element.textContent === "Done") {
+        console.log("CONFIRM THIS AMOUNT")
+      }else {
         input.append((input.value = input.value.concat(element.textContent)));
       }
   })
-  // keypadButton.forEach(element => {
-  //   console.log("actived")
-  // });
+  
 }
