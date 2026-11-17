@@ -33,10 +33,11 @@ input{
     padding: 10px;
     font-size: 3rem;
     width: min(320px, 400px);
-    margin-left: -1rem;
+    /* margin-left: -1rem; */
     border-radius: 1rem;
     margin-bottom: 1rem;
-
+    align-self: center;
+    justify-self: center;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button{
