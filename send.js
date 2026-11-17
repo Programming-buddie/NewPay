@@ -71,8 +71,8 @@ for (let index = 0; index < numButton.length; index++) {
 
         // Rule for empty amount field
         if (input.value === "" ) {
-          if (document.querySelector(".payment-info").className === "off") {
-            document.querySelector(".payment-info").className="off"
+          if (document.querySelector(".payment-info").className === "off"  || document.querySelector(".payment-info").className === "payment-info") {
+            console.log(document.querySelector(".payment-info").className, document.querySelector(".off").className )
             confirmDiv.children[0].textContent = "Please enter an amount"
           }else{
             document.querySelector(".payment-info").className="off"
@@ -81,8 +81,11 @@ for (let index = 0; index < numButton.length; index++) {
           
           
         } 
-        else if(document.querySelector(".off").className === "off" || document.querySelector(".payment-info").className === "payment-info") {
-          // document.querySelector(".off").className = "payment-info"
+        // else if(document.querySelector(".off").className === "off" ) {
+        //   // document.querySelector(".off").className = "payment-info"
+        //   confirmDiv.children[0].textContent = "Confirm Amount"
+        //   document.querySelector(".payment-amount-info").children[1].textContent = `₦`+input.value}
+         else if (document.querySelector(".payment-info").className === "payment-info"){
           confirmDiv.children[0].textContent = "Confirm Amount"
           document.querySelector(".payment-amount-info").children[1].textContent = `₦`+input.value
         }
