@@ -71,19 +71,27 @@ for (let index = 0; index < numButton.length; index++) {
 
         // Rule for empty amount field
         if (input.value === "" ) {
-          // confirmDiv.style.display = "flex"
-          document.querySelector(".payment-info").style.display = "none"
-          confirmDiv.children[0].textContent = "Please enter an amount"
+          if (document.querySelector(".payment-info").className === "off") {
+            document.querySelector(".payment-info").className="off"
+            confirmDiv.children[0].textContent = "Please enter an amount"
+          }else{
+            document.querySelector(".payment-info").className="off"
+            confirmDiv.children[0].textContent = "Please enter an amount"
+          }
           
-        } else {
-          document.querySelector(".payment-info").style.display = "flex"
+          
+        } 
+        else if(document.querySelector(".off").className === "off" || document.querySelector(".payment-info").className === "payment-info") {
+          // document.querySelector(".off").className = "payment-info"
+          confirmDiv.children[0].textContent = "Confirm Amount"
           document.querySelector(".payment-amount-info").children[1].textContent = `₦`+input.value
         }
         // The cancel button to remove it
         document.querySelector(".next-process").children[1].addEventListener("click", ()=>{
           confirmDiv.style.display = "none"
         })
-      }else {
+      } else  {
+        // Add the number to the input
         input.append((input.value = input.value.concat(element.textContent)));
       }
   })
