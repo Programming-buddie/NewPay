@@ -1,6 +1,8 @@
 const back = document.querySelector(".back");
 const input = document.querySelector("input");
 const keypadButton = document.querySelector(".keyboard");
+const confirmDiv = document.querySelector(".confirmContainer")
+
 
 // BACK BUTTON
 back.addEventListener("click", prevPage);
@@ -58,7 +60,21 @@ for (let index = 0; index < numButton.length; index++) {
         input.value = app;
       }
       else if (element.textContent === "Done") {
-        console.log("CONFIRM THIS AMOUNT")
+        confirmDiv.style.display = "flex"
+
+        document.querySelector(".send-to-info").children[1].textContent = document.querySelector(".name").textContent
+        if (input.value === "" ) {
+          confirmDiv.style.display = "flex"
+          document.querySelector(".payment-info").style.display = "none"
+          confirmDiv.children[0].textContent = "Please enter an amount"
+          
+        } else {
+          document.querySelector(".payment-info").style.display = "none"
+          document.querySelector(".payment-amount-info").children[1].textContent = `₦`+input.value
+        }
+        document.querySelector(".next-process").children[1].addEventListener("click", ()=>{
+          confirmDiv.style.display = "none"
+        })
       }else {
         input.append((input.value = input.value.concat(element.textContent)));
       }
