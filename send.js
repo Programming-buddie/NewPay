@@ -53,25 +53,33 @@ function prevPage() {
 const numButton = keypadButton.children
 for (let index = 0; index < numButton.length; index++) {
   const element = numButton[index];
+
+  // All number button eventlistner 
   element.addEventListener("click", ()=>{
     
+    // Cancel Button
     if (element.textContent === "x") {
-        const app = input.value.slice(0, -1);
-        input.value = app;
+        const backspace = input.value.slice(0, -1);
+        input.value = backspace;
       }
+      // Done button
       else if (element.textContent === "Done") {
         confirmDiv.style.display = "flex"
 
+        // Linking the Send-to name to the confirm name 
         document.querySelector(".send-to-info").children[1].textContent = document.querySelector(".name").textContent
+
+        // Rule for empty amount field
         if (input.value === "" ) {
-          confirmDiv.style.display = "flex"
+          // confirmDiv.style.display = "flex"
           document.querySelector(".payment-info").style.display = "none"
           confirmDiv.children[0].textContent = "Please enter an amount"
           
         } else {
-          document.querySelector(".payment-info").style.display = "none"
+          document.querySelector(".payment-info").style.display = "flex"
           document.querySelector(".payment-amount-info").children[1].textContent = `₦`+input.value
         }
+        // The cancel button to remove it
         document.querySelector(".next-process").children[1].addEventListener("click", ()=>{
           confirmDiv.style.display = "none"
         })
