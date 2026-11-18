@@ -89,7 +89,10 @@ for (let index = 0; index < numButton.length; index++) {
           .children[0].addEventListener("click", ()=>{
             alert.name="NewPay"
             alert("You sent "+`₦`+input.value+" to "+document.querySelector(".name").textContent)
-            
+            setTimeout(() => {
+              confirmDiv.style.display = "none";
+              window.location.href = "index.html"
+            }, 400);
           })
       }
 
