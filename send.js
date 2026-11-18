@@ -92,7 +92,10 @@ for (let index = 0; index < numButton.length; index++) {
             setTimeout(() => {
               confirmDiv.style.display = "none";
               window.location.href = "index.html"
-            }, 400);
+            }, 700);
+            // let balance = Number(localStorage.getItem("balance"))
+            // balance -= Number(input.value)
+            // console.log(localStorage.setItem("balance", balance))
           })
       }
 
