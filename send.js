@@ -62,23 +62,40 @@ for (let index = 0; index < numButton.length; index++) {
     }
     // Done button
     else if (element.textContent === "Done") {
+
+      // Show the confirm Page
       confirmDiv.style.display = "flex";
+
+      // Checking for empty input
+      if (input.value === "") {
+
+        // Change the Text and hide the display of payment-info
+        confirmDiv.children[0].textContent = "Please enter an amount";
+        document.querySelector(".payment-amount-info").style.display = "none"
+        document.querySelector(".send-to-info").style.display = "none"
+
+      } 
+      else{
+
+        // Show the display of payment-info and adding naira sign to it
+        confirmDiv.children[0].textContent = "Confirm this Payment";
+        document.querySelector(".payment-amount-info").style.display = "flex"
+        document.querySelector(".send-to-info").style.display = "flex"
+        document.querySelector(".payment-amount-info").children[1].textContent = `₦`+input.value
+
+      }
 
       // The cancel button to remove the confirm screen wen you click done
       document
           .querySelector(".next-process")
           .children[1].addEventListener("click", () => {
             confirmDiv.style.display = "none";
-          });
+          }); 
 
       // Linking the Send-to name to the confirm name
         document.querySelector(".send-to-info").children[1].textContent =
         document.querySelector(".name").textContent;
-
-      // Rule for empty amount field
-      if (input.value === "") {
-        confirmDiv.children[0].textContent = "Please enter an amount";
-      } 
+      
     }
     else {
         // Add the number to the input
