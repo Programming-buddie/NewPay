@@ -87,7 +87,8 @@ for (let index = 0; index < numButton.length; index++) {
          document
           .querySelector(".next-process")
           .children[0].addEventListener("click", ()=>{
-            console.log("You sent "+`₦`+input.value+" to "+document.querySelector(".name").textContent)
+            alert.name="NewPay"
+            alert("You sent "+`₦`+input.value+" to "+document.querySelector(".name").textContent)
             
           })
       }
