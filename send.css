@@ -3,10 +3,10 @@
    --octonary-color: #F3F4F6; 
 }
 body{
-    margin: 0;
+    /* margin: -1rem ; */
 }
 .send-main{
-    margin: 1rem;
+    /* margin: 1rem; */
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--secondary-color);
     padding: 1rem;
