@@ -83,6 +83,13 @@ for (let index = 0; index < numButton.length; index++) {
         document.querySelector(".send-to-info").style.display = "flex"
         document.querySelector(".payment-amount-info").children[1].textContent = `₦`+input.value
 
+        // The continue button
+         document
+          .querySelector(".next-process")
+          .children[0].addEventListener("click", ()=>{
+            console.log("You sent "+`₦`+input.value+" to "+document.querySelector(".name").textContent)
+            
+          })
       }
 
       // The cancel button to remove the confirm screen wen you click done
